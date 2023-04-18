@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta property="og:url" content="http://www.serchm.com">
+        <meta property="og:title" content="searchm">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="../start_img.png">
+        <meta property="og:description" content="SearchM">
+        <meta name="description" content="SearchM">
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#000000">
+        <title>SearchM</title>
+
+        <link rel="shortcut icon" href="searchm.co.kr/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="searchm.co.kr/favicon.ico" type="image/x-icon" />
+
+        <style>
+            /*----------------공통----------------*/
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            section {
+                height: 100%;
+                color:#000;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1{
+                font-size: 2rem;
+                margin-bottom:2rem;
+            }
+
+            /*----------------헤더 네비----------------*/
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color:rgba(0,0,0,0.8);
+                padding: 10px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 999;
+            }
+            nav {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 10px 0;
+            margin: auto;
+            }
+
+            nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            }
+
+            nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            }
+
+            .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            left: 40px;
+            }
+
+            /*----------------섹션 1----------------*/
+
+            section#section1 {
+                position: relative;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background:rgba(0,0,0,0.3);
+                color:#fff;
+            }
+
+            #bg-video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: -1;
+            }
+
+            .content {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                color: #fff;
+            }
+
+            #bg-video::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                z-index: -1;
+            }
+
+            /*----------------섹션 2----------------*/
+            .tabs {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+            }
+            .tabs button {
+                background-color: #ccc;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            .tabs button.active {
+                background-color: #000;
+            }
+            .tab-content {
+                display: none;
+                padding: 20px;
+                background-color: #f1f1f1;
+                border-radius: 5px;
+            }
+            .tab-content.active {
+                display: block;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Logo</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#section1">About</a>
+                    </li>
+                    <li>
+                        <a href="#section2">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#section3">Partnership</a>
+                    </li>
+                    <li>
+                        <a href="#section4">Why</a>
+                    </li>
+                    <li>
+                        <a href="#section5">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <section id="section1">
+            <video autoplay muted loop id="bg-video">
+                <source src="video/bg_sm.mp4" type="video/mp4">
+            </video>
+            <div>
+                <h1>
+                    High Performance 
+                    & Differentiation
+                </h1>
+                <p style="width:60%; margin:0 auto;" >
+                    써치엠은 2008년 네이버와 제일기획,다음,야후,웰콤출신의 전문 광고인력들이 모여 창립한 온라인 마케팅그룹입니다.
+                    SA(Search Ad), DA(Display Ad), OpenMarket Ad, Mobile/SNS 마케팅,Viral 마케팅,사이트 컨설팅, IPTV 등 다양한 미디어 채널을 활용한
+                    Integrated Marketing Solutions을 제공하여 클라이언트의 성공을 컨설팅 하는 종합 디지털 마케팅회사입니다.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="section2">
+            <h1>Section 2</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-target="#tab1">Tab 1</button>
+                <button class="tab-btn" data-target="#tab2">Tab 2</button>
+                <button class="tab-btn" data-target="#tab3">Tab 3</button>
+                <button class="tab-btn" data-target="#tab4">Tab 4</button>
+            </div>
+            <div class="tab-content active" id="tab1">
+                <div class="history-item">
+                    <h3>2000</h3>
+                    <p>첫 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2001</h3>
+                    <p>두 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2002</h3>
+                    <p>세 번째 히스토리 내용입니다.</p>
+                </div>
+                <div class="history-item">
+                    <h3>2003</h3>
+                    <p>첫 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2004</h3>
+                    <p>두 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2005</h3>
+                    <p>세 번째 히스토리 내용입니다.</p>
+                </div>
+                <div class="history-item">
+                    <h3>2006</h3>
+                    <p>첫 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2007</h3>
+                    <p>두 번째 히스토리 내용입니다.</p>
+                </div>
+
+                <div class="history-item">
+                    <h3>2008</h3>
+                    <p>세 번째 히스토리 내용입니다.</p>
+                </div>
+            </div>
+            <div class="tab-content" id="tab2">
+                <h2>Tab 2 Content</h2>
+                <p>Nullam eget nunc congue, hendrerit velit ut, tempus arcu. Sed quis sollicitudin turpis, eu mollis mauris.</p>
+            </div>
+            <div class="tab-content" id="tab3">
+                <h2>Tab 3 Content</h2>
+                <p>Quisque ut rhoncus lectus, a consequat tortor. Duis blandit diam eu massa placerat, a lacinia urna interdum.</p>
+            </div>
+            <div class="tab-content" id="tab4">
+                <h2>Tab 4 Content</h2>
+                <p>Phasellus ullamcorper pharetra felis vel aliquet. Sed non lorem vitae libero porttitor pharetra.</p>
+            </div>
+        </section>
+
+
+        <section id="section3">
+            <h1>Section 3</h1>
+            <p>Content for section 3</p>
+        </section>
+
+
+        <section id="section4">
+            <h1>Section 4</h1>
+            <p>Content for section 4</p>
+        </section>
+
+
+        <section id="section5">
+            <h1>Section 5</h1>
+            <p>Content for section 5</p>
+        </section>
+
+
+
+<!------------------------------------------------------------------->
+        <script src="script/jquery-3.6.4.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            // Fullscreen sections
+            $('section').height($(window).height());
+            $(window).resize(function() {
+                $('section').height($(window).height());
+            });
+
+            // Scroll to next section on mousewheel scroll
+            $('section').on('wheel', function(e) {
+                if (e.originalEvent.deltaY > 0) {
+                // Scrolling down, go to next section
+                $('html, body').animate({
+                    scrollTop: $(this).next().offset().top
+                }, 200);
+                } else {
+                // Scrolling up, go to previous section
+                $('html, body').animate({
+                    scrollTop: $(this).prev().offset().top
+                }, 200);
+                }
+                });
+            });
+
+            // Scroll to section on nav link click
+            $('nav a').click(function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                scrollTop: $(target).offset().top
+                }, 200);
+            });
+        </script>
+        <script>
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const target = btn.getAttribute('data-target');
+                    
+                    tabBtns.forEach((btn) => {
+                        btn.classList.remove('active');
+                    });
+                    tabContents.forEach((content) => {
+                        content.classList.remove('active');
+                    });
+                    
+                    btn.classList.add('active');
+                    document.querySelector(target).classList.add('active');
+                });
+            });
+        </script>
+
+
+
+        
+        
+    </body>
+</html>
