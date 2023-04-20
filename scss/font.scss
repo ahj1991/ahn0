@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@media all and (max-width: 768px) {
+    .h1 {
+        font-size: 58px !important;
+        text-align: center;
+    }
+
+    .h2 {
+        font-size: 36px !important;
+    }
+
+    .h3{
+        font-size: 22px !important;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 920px) {
+}
+@media all and (min-width: 920px) and (max-width: 1200px) {
+}
+@media all and (min-width: 1200px) and (max-width: 1660px) {
+}
+@media all and (min-width: 1660px) {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: 14px;
+    line-height: 1.8;
+
+    font-family: "Noto Sans KR", Helvetica, "NotoSans", "Roboto", "Open Sans",
+        sans-serif;
+}
+
+.h1 {
+    font-size: 113px;
+    font-weight: 800;
+    line-height: 1;
+    font-family: "Avanti_Bold";
+}
+
+.h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: "Avanti_Bold";
+}
+
+.h3 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.h4 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.h5 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.display_1 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.display_2 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.display_3 {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Avanti";
+    src: url("../fonts/Avanti.eot");
+    src: url("../fonts/Avanti.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Avanti.svg#Avanti") format("svg"),
+        url("../fonts/Avanti.ttf") format("truetype"),
+        url("../fonts/Avanti.woff") format("woff"),
+        url("../fonts/Avanti.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avanti_Bold";
+    src: url("../fonts/Avanti_Bold.eot");
+    src: url("../fonts/Avanti_Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Avanti_Bold.svg#Avanti") format("svg"),
+        url("../fonts/Avanti_Bold.ttf") format("truetype"),
+        url("../fonts/Avanti_Bold.woff") format("woff"),
+        url("../fonts/Avanti_Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
