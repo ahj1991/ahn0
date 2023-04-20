@@ -1,0 +1,403 @@
+@charset "UTF-8";
+
+/*프리텐다드 폰트*/
+
+@font-face {
+  font-family: 'Pretendard-Thin';
+  src: url("/font/Pretendard-Thin.woff") format('woff');
+  src: local("※"), url("/font/Pretendard-Thin.woff") format('woff');
+  font-weight: 100;
+  font-style: thin;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url("/font/Pretendard-Regular.woff") format('woff');
+  src: local("※"), url("/font/Pretendard-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Black';
+  src: url("/font/Pretendard-Black.woff") format('woff');
+  src: local("※"), url("/font/Pretendard-Black.woff") format('woff');
+  font-weight: 900;
+  font-style: bold;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+body {
+  background-color: transparent;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #000;
+}
+
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Pretendard-Black';
+  font-style: bold;
+}
+
+button,
+input,
+li,
+ol,
+p,
+select,
+td,
+textarea{
+  font-family: 'Pretendard-Regular';
+  font-style: normal;
+}
+
+fieldset,
+img,
+button {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+address,
+em {
+  font-style: normal;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button{
+  -webkit-box-sizing: border-box;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -moz-box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+}
+
+button{
+  overflow: visible;
+  width: auto;
+}
+
+
+
+
+/*//////////////////////////////////
+전체 공통
+//////////////////////////////////*/
+
+#member_wrap #list_wrap,
+#member_wrap #write_wrap{
+    width:80%;
+    margin:0 auto;
+}
+
+h2{
+    text-align: center;
+    margin:2rem auto;
+}
+
+
+/*//////////////////////////////////
+프로필 목록
+//////////////////////////////////*/
+
+#list_search{
+    overflow: hidden;
+    margin-bottom:1rem;
+}
+
+#list_search div{
+    float:left;
+}
+
+#list_search input{
+    padding:1rem;
+    
+}
+
+#list_search #search_box{
+    border:1px solid #999;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+#list_search .newlist_btn{
+  background-color: #d9d9d9;
+  border-radius: 30px;
+}
+
+#list_search .btn{
+    background-color: #000;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+#list_search .btn input{
+    color:#fff;
+}
+
+#list_content{
+    border-top:1px solid #000;
+
+}
+
+#list_content #data_area div{
+    overflow:hidden;
+    
+}
+
+#list_content #data_area div p{
+    float:left;
+    padding:1rem;
+}
+
+/*//////////////////////////////////
+프로필 view
+//////////////////////////////////*/
+
+#member_view{
+    width:400px;
+    padding:40px;
+    margin:0 auto;
+}
+
+#view_area{
+    margin-bottom:2rem;
+    padding:3rem;
+
+    background:#f9f9f9;
+    
+    border-radius: 50px;
+
+    box-shadow: 8px 12px 15px 0px #d9d9d9;
+}
+
+#view_area .view_img{
+    width:250px;
+    height:250px;
+    margin:0 auto 1rem;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+#view_area .view_img img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+}
+
+#view_area #member_intro{
+    border-bottom:1px solid #999;
+    padding-bottom:1rem;
+}
+
+#view_area #member_intro p{
+    text-align: center;
+}
+
+#view_area .member_business{
+    border-bottom:1px solid #999;
+}
+#view_area .member_business p{
+    margin:1rem 0;
+}
+
+#member_view #qr_btn{
+    width:150px;
+    margin:0 auto;
+}
+
+#member_view #qr_btn button:hover{
+    background-color:#fff;
+    color:#000;
+    border:1px solid #000;
+    box-sizing: border-box;
+    width:150px;
+}
+
+#member_view #qr_btn button{
+    padding:1rem;
+    margin-bottom:1rem;
+    background-color:#000;
+    border-radius: 30px;   
+    color:#fff; 
+    width:150px;
+}
+
+/*//////////////////////////////////
+프로필 write
+//////////////////////////////////*/
+#write_wrap .upload_form ul li label{
+  width:100%;
+  padding:0.5rem 0;
+}
+
+#write_wrap .upload_form ul li input,
+#write_wrap .upload_form ul li textarea{
+    width:100%;
+    padding:1rem 0;
+    text-indent: 1rem;
+}
+#write_wrap .upload_form ul li{
+    margin-bottom:1rem;
+}
+
+#write_wrap .upload_form ul li label,
+#write_wrap .upload_form .file_box label{
+  font-weight: bold;
+}
+
+
+#write_wrap .upload_form ul li input,
+#write_wrap .upload_form ul li textarea,
+#write_wrap .upload_form .file_box input{
+    background-color:#f4f4f4;
+    border-radius: 30px;
+}
+
+#write_wrap .upload_form .file_box label,
+#write_wrap .upload_form .file_box input{
+  padding:1rem;  
+}
+
+#write_wrap #save_btn input:hover{
+    background-color:#fff;
+    color:#000;
+    border:1px solid #000;
+    box-sizing: border-box;
+
+}
+
+#write_wrap #save_btn input{
+    padding:1rem 5rem;
+    margin:1rem auto;
+    background-color:#000;
+    border-radius: 30px;   
+    color:#fff;
+    display: block;
+}
+
+#qr_btn div{
+  overflow:hidden;
+}
+
+
+@media all and (max-width: 768px) {
+
+  /*뷰페이지*/
+  #member_view{
+    width:80% !important;
+  }
+  #view_area .view_img{
+    width:180px;
+    margin:0 auto 1rem;
+  }
+
+  #view_area .view_img img{
+      width:180px;
+      height:180px;
+      border-radius: 180px;
+  }
+
+  /*리스트페이지*/
+  #list_content #data_area div p:not(:nth-child(2)){
+    padding:1rem 0;    
+  }
+  #list_content #data_area div p:nth-child(2){
+    padding:1rem;    
+  }
+
+  #list_search .newlist_btn{
+    margin-top:0.5rem;
+    clear: both;
+  }
+
+
+}

@@ -1,0 +1,2 @@
+INSERT INTO name_card (name, job_title, team, phone, email, introduction, certification, advertiser_info)
+VALUES ('John Doe', 'Marketing Manager', 'Marketing', '123-456-7890', 'john.doe@example.com', 'Hello, I am John Doe', 'Marketing Certification', 'XYZ Corporation');
